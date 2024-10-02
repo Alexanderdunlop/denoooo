@@ -1,3 +1,4 @@
+import { runTimeLimitedCache } from "./leetcode/js-cache-with-limit.ts";
 import { composition } from "./leetcode/js-composition.ts";
 import { runMemoize } from "./leetcode/js-memoize.ts";
 import { runPromiseRace } from "./leetcode/js-promise-race.ts";
@@ -12,5 +13,6 @@ if (import.meta.main) {
 
   // composition();
   // runMemoize();
-  runPromiseRace();
+  // runPromiseRace();
+  runTimeLimitedCache();
 }
