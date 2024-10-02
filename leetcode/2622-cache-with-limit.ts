@@ -49,7 +49,8 @@ class TimeLimitedCache {
 // Problem here: Javascript's architecture, but each setTimeout creates a list that a thread regularly has to go check every single one of them to ensure they are expired on time.
 
 class TimeLimitedCacheO {
-  cache: Map<number, { value: number; ref: number }> = new Map();
+  cache: Map<number, { value: number; ref: ReturnType<typeof setTimeout> }> =
+    new Map();
 
   constructor() {}
 

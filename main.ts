@@ -1,7 +1,8 @@
-import { runTimeLimitedCache } from "./leetcode/js-cache-with-limit.ts";
 import { composition } from "./leetcode/js-composition.ts";
 import { runMemoize } from "./leetcode/js-memoize.ts";
-import { runPromiseRace } from "./leetcode/js-promise-race.ts";
+import { runTimeLimitedCache } from "./leetcode/2622-cache-with-limit.ts";
+import { runPromiseTimeLimit } from "./leetcode/2637-promise-time-limit.ts";
+import { runDebounce } from "./leetcode/2627-debounce.ts";
 
 export function add(a: number, b: number): number {
   return a + b;
@@ -13,6 +14,7 @@ if (import.meta.main) {
 
   // composition();
   // runMemoize();
-  // runPromiseRace();
-  runTimeLimitedCache();
+  // runPromiseTimeLimit();
+  // runTimeLimitedCache();
+  runDebounce();
 }

@@ -14,7 +14,7 @@ function timeLimit(fn: Fn, t: number): Fn {
   };
 }
 
-export function runPromiseRace() {
+export function runPromiseTimeLimit() {
   const limited = timeLimit(
     (t) => new Promise((res) => setTimeout(res, t)),
     100
